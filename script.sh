@@ -3,7 +3,7 @@ sudo wget -O xampp.run -q --show-progress "https://downloads.sourceforge.net/pro
 sudo apt -y install git net-tools
 sudo chmod +x ./xampp.run
 sudo echo -e "Y Y \n Y" | sudo ./xampp.run --mode text
-sudo ln -s $HOME/Bureau /opt/lampp/htdocs
+sudo ln -s /opt/lampp/htdocs $HOME/Bureau
 sudo touch /etc/rc.local
 sudo chmod +x /etc/rc.local
 sudo sh -c "echo '#!/bin/sh -e' >> /etc/rc.local"
