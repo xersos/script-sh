@@ -10,4 +10,11 @@ sudo chmod +x /etc/rc.local
 sudo sh -c "echo '#!/bin/sh -e' >> /etc/rc.local"
 sudo sh -c "echo '/opt/lampp/lampp start' >> /etc/rc.local"
 sudo sh -c "echo 'exit 0' >> /etc/rc.local"
+read -p "Entrer les global git ? (O/n) : " global
+if global
+  read -p "Email : " global.email
+  git config --global user.email "$global.email"
+  read -p "Name : " global.name
+  git config --global user.name "$global.name"
+fi
 # TODO : prompt user global
